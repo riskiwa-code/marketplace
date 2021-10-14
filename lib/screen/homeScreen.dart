@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
+import 'package:marketplace/model/ProductModel.dart';
+import 'package:marketplace/provider/ProductProvider.dart';
 import 'package:marketplace/screen/daftarScreen.dart';
 import 'package:marketplace/screen/kategoriScreen.dart';
 import 'package:marketplace/screen/keranjangScreen.dart';
@@ -68,6 +70,17 @@ class _HomeScreenState extends State<HomeScreen> {
             })
       ],
     );
+  }
+
+  Widget ListProductMakanan(data) {
+    return ListView.builder(
+        scrollDirection: Axis.horizontal,
+        itemCount: data.length,
+        itemBuilder: (context, index) {
+          final product = data[index];
+
+          return ProductCard(product);
+        });
   }
 
   @override
@@ -194,25 +207,22 @@ class _HomeScreenState extends State<HomeScreen> {
           ),
           Container(
             height: 275,
-            child: ListView(
-              scrollDirection: Axis.horizontal,
-              children: [
-                SizedBox(
-                  width: 24,
-                ),
-                ProductCard(),
-                SizedBox(
-                  width: 20,
-                ),
-                ProductCard(),
-                SizedBox(
-                  width: 20,
-                ),
-                ProductCard(),
-                SizedBox(
-                  width: 24,
-                ),
-              ],
+            child: FutureBuilder<List<ProductModel>>(
+              future: ProductProvider.getUsersLocally(context),
+              builder: (context, snapshot) {
+                final product = snapshot.data;
+
+                switch (snapshot.connectionState) {
+                  case ConnectionState.waiting:
+                    return Center(child: CircularProgressIndicator());
+                  default:
+                    if (snapshot.hasError) {
+                      return Center(child: Text('Some error occurred!'));
+                    } else {
+                      return ListProductMakanan(product);
+                    }
+                }
+              },
             ),
           ),
           Divider(),
@@ -242,15 +252,6 @@ class _HomeScreenState extends State<HomeScreen> {
                 SizedBox(
                   width: 24,
                 ),
-                ProductCard(),
-                SizedBox(
-                  width: 20,
-                ),
-                ProductCard(),
-                SizedBox(
-                  width: 20,
-                ),
-                ProductCard(),
                 SizedBox(
                   width: 24,
                 ),

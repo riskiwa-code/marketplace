@@ -1,47 +1,52 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace/model/ProductModel.dart';
 import 'package:marketplace/screen/keranjangScreen.dart';
 
 class ProductCard extends StatelessWidget {
-  const ProductCard();
+  final ProductModel product;
+  const ProductCard(this.product);
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 150,
+      width: 180,
+      padding: EdgeInsets.only(left: 24),
       child: Stack(
         children: [
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset("assets/img/product-1.png"),
+              Center(
+                child: Image.asset(
+                  "assets/img/produk/" + product.gambar,
+                  height: 100,
+                  fit: BoxFit.cover,
+                ),
+              ),
               SizedBox(
                 height: 15,
               ),
               Text(
-                "Toko Mas Agus",
+                product.namaToko + " , " + product.kategori,
                 style: TextStyle(color: Colors.grey),
               ),
               SizedBox(
                 height: 10,
               ),
-              Text("Nissin Cup Noodle Seafood"),
+              Text(
+                product.namaProduk,
+                style: TextStyle(fontSize: 16),
+              ),
               SizedBox(
                 height: 5,
               ),
               Row(
                 children: [
-                  Icon(
-                    Icons.star,
-                    size: 20,
-                  ),
-                  Icon(
-                    Icons.star,
-                    size: 20,
-                  ),
-                  Icon(
-                    Icons.star,
-                    size: 20,
-                  ),
+                  for (var i = 0; i < int.parse(product.rating); i++)
+                    Icon(
+                      Icons.star,
+                      size: 20,
+                    ),
                 ],
               ),
               SizedBox(
@@ -49,7 +54,7 @@ class ProductCard extends StatelessWidget {
               ),
               Align(
                 alignment: Alignment.topLeft,
-                child: Text("Rp. 11,000",
+                child: Text("Rp. ${product.harga}",
                     style: TextStyle(
                       fontWeight: FontWeight.w700,
                       fontSize: 18,

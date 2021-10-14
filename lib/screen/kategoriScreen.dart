@@ -38,7 +38,7 @@ class _KategoriScreenState extends State<KategoriScreen> {
       ),
       elevation: 5,
       child: Container(
-        width: 170,
+        width: (MediaQuery.of(context).size.width / 2) - 34,
         padding: const EdgeInsets.all(15),
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
