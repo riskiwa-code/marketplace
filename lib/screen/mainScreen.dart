@@ -40,7 +40,7 @@ class _MainScreenState extends State<MainScreen> {
                 _selectedIndex = index;
               });
             },
-            selectedItemColor: Colors.red,
+            selectedItemColor: Color(0xff0C3955),
             unselectedItemColor: Colors.black,
             items: const <BottomNavigationBarItem>[
               BottomNavigationBarItem(

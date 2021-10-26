@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:marketplace/model/ProductModel.dart';
+import 'package:marketplace/model/ProdukModel.dart';
+import 'package:marketplace/screen/detailProdukScreen.dart';
 import 'package:marketplace/screen/keranjangScreen.dart';
 
 class ProductCard extends StatelessWidget {
-  final ProductModel product;
+  final ProdukModel product;
   const ProductCard(this.product);
 
   @override
@@ -16,18 +17,27 @@ class ProductCard extends StatelessWidget {
           Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Center(
-                child: Image.asset(
-                  "assets/img/produk/" + product.gambar,
-                  height: 100,
-                  fit: BoxFit.cover,
+              InkWell(
+                onTap: () {
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(
+                        builder: (context) => DetailProdukScreen(this.product)),
+                  );
+                },
+                child: Center(
+                  child: Image.asset(
+                    "assets/img/produk/" + product.gambar,
+                    height: 100,
+                    fit: BoxFit.cover,
+                  ),
                 ),
               ),
               SizedBox(
                 height: 15,
               ),
               Text(
-                product.namaToko + " , " + product.kategori,
+                "Toko , " + product.kategori,
                 style: TextStyle(color: Colors.grey),
               ),
               SizedBox(
@@ -42,7 +52,7 @@ class ProductCard extends StatelessWidget {
               ),
               Row(
                 children: [
-                  for (var i = 0; i < int.parse(product.rating); i++)
+                  for (var i = 0; i < product.rating; i++)
                     Icon(
                       Icons.star,
                       size: 20,

@@ -8,11 +8,11 @@ class PengaturanTokoScreen extends StatefulWidget {
 }
 
 class _PengaturanTokoScreenState extends State<PengaturanTokoScreen> {
-  String _statusValue;
+  String? _statusValue;
   List<String> _statusList = ['Aktif', 'Tidak Akftif'];
-  String _kotaValue;
+  String? _kotaValue;
   List<String> _kotaList = ['Jakarta', 'Bandung'];
-  String _metodePembayaranValue;
+  String? _metodePembayaranValue;
   List<String> _metodePembayaranList = ['Debit', 'Kredit'];
   @override
   Widget build(BuildContext context) {
@@ -72,7 +72,7 @@ class _PengaturanTokoScreenState extends State<PengaturanTokoScreen> {
             }).toList(),
             hint: Text("Pilih Status"),
             value: _statusValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _statusValue = value;
               });
@@ -97,7 +97,7 @@ class _PengaturanTokoScreenState extends State<PengaturanTokoScreen> {
             }).toList(),
             hint: Text("Pilih Kota"),
             value: _kotaValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _kotaValue = value;
               });
@@ -136,7 +136,7 @@ class _PengaturanTokoScreenState extends State<PengaturanTokoScreen> {
             }).toList(),
             hint: Text("Pilih Status"),
             value: _metodePembayaranValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _metodePembayaranValue = value;
               });

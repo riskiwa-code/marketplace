@@ -1,4 +1,11 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace/screen/kekolaProdukScreen.dart';
+import 'package:marketplace/screen/kelolaPromoScreen.dart';
+import 'package:marketplace/screen/masukanProdukScreen.dart';
+import 'package:marketplace/screen/pengaturanTokoScreen.dart';
+import 'package:marketplace/screen/penjualanScreen.dart';
+import 'package:marketplace/screen/pesananScreen.dart';
+import 'package:marketplace/utils/user_preferences.dart';
 
 class tokoScreen extends StatefulWidget {
   // const tokoScreen({ Key? key }) : super(key: key);
@@ -27,7 +34,12 @@ class _tokoScreenState extends State<tokoScreen> {
               "Pengaturan Toko",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PengaturanTokoScreen()),
+              );
+            },
             minVerticalPadding: 30,
           ),
           Divider(
@@ -43,7 +55,12 @@ class _tokoScreenState extends State<tokoScreen> {
               "Masukkan Produk",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => MasukanProdukScreen()),
+              );
+            },
             minVerticalPadding: 30,
           ),
           Divider(
@@ -59,7 +76,12 @@ class _tokoScreenState extends State<tokoScreen> {
               "Kelola Produk",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => KelolaProdukScreen()),
+              );
+            },
             minVerticalPadding: 30,
           ),
           Divider(
@@ -75,7 +97,12 @@ class _tokoScreenState extends State<tokoScreen> {
               "Kelola Promo",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => KelolaPromoScreen()),
+              );
+            },
             minVerticalPadding: 30,
           ),
           Divider(
@@ -91,7 +118,12 @@ class _tokoScreenState extends State<tokoScreen> {
               "Penjualan",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PenjualanScreen()),
+              );
+            },
             minVerticalPadding: 30,
           ),
           Divider(
@@ -107,7 +139,12 @@ class _tokoScreenState extends State<tokoScreen> {
               "Pesanan",
               style: TextStyle(fontSize: 18, fontWeight: FontWeight.bold),
             ),
-            onTap: () {},
+            onTap: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => PesananScreen()),
+              );
+            },
             minVerticalPadding: 30,
           ),
           Divider(
@@ -128,6 +165,14 @@ class _tokoScreenState extends State<tokoScreen> {
           ),
           Divider(
             height: 1,
+          ),
+          TextButton(
+            onPressed: () {
+              UserPreferences.setIsLogin(false);
+              UserPreferences.setUserRole("");
+              Navigator.pop(context);
+            },
+            child: Text("Logout"),
           ),
         ],
       ),

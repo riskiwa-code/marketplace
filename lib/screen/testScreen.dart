@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:marketplace/model/ProductModel.dart';
+import 'package:marketplace/model/ProdukModel.dart';
 import 'package:marketplace/provider/ProductProvider.dart';
 
 class TestScreen extends StatefulWidget {
@@ -10,6 +10,8 @@ class TestScreen extends StatefulWidget {
 }
 
 class _TestScreenState extends State<TestScreen> {
+  Map kota = {};
+
   Widget ListProduct(data) {
     return ListView.builder(
         itemCount: data.length,
@@ -29,23 +31,24 @@ class _TestScreenState extends State<TestScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: FutureBuilder<List<ProductModel>>(
-        future: ProductProvider.getUsersLocally(context),
-        builder: (context, snapshot) {
-          final product = snapshot.data;
+        // body: FutureBuilder<List<ProdukModel>>(
+        //   future: ProductProvider.getUsersLocally(context),
+        //   builder: (context, snapshot) {
+        //     final product = snapshot.data;
 
-          switch (snapshot.connectionState) {
-            case ConnectionState.waiting:
-              return Center(child: CircularProgressIndicator());
-            default:
-              if (snapshot.hasError) {
-                return Center(child: Text('Some error occurred!'));
-              } else {
-                return ListProduct(product);
-              }
-          }
-        },
-      ),
-    );
+        //     print(kota);
+        //     switch (snapshot.connectionState) {
+        //       case ConnectionState.waiting:
+        //         return Center(child: CircularProgressIndicator());
+        //       default:
+        //         if (snapshot.hasError) {
+        //           return Center(child: Text('Some error occurred!'));
+        //         } else {
+        //           return ListProduct(product);
+        //         }
+        //     }
+        //   },
+        // ),
+        );
   }
 }

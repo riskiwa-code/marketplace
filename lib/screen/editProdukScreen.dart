@@ -8,15 +8,15 @@ class EditProdukScreen extends StatefulWidget {
 }
 
 class _EditProdukScreenState extends State<EditProdukScreen> {
-  String _kategoriValue;
+  String? _kategoriValue;
   List<String> _kategoriList = ['Makanan', 'Minuman'];
-  String _subKategoriValue;
+  String? _subKategoriValue;
   List<String> _subKategoriList = ['Basah', 'Kering'];
-  String _produksiValue;
+  String? _produksiValue;
   List<String> _produksiList = ['Lokal', 'Luar Negeri'];
-  String _merkValue;
+  String? _merkValue;
   List<String> _merkList = ['Fiesta', 'So Good'];
-  String _statusValue;
+  String? _statusValue;
   List<String> _statusList = ['Aktif', 'Tidak Aktif'];
   @override
   Widget build(BuildContext context) {
@@ -43,7 +43,7 @@ class _EditProdukScreenState extends State<EditProdukScreen> {
             }).toList(),
             hint: Text("Pilih Kategori"),
             value: _kategoriValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _kategoriValue = value;
               });
@@ -63,7 +63,7 @@ class _EditProdukScreenState extends State<EditProdukScreen> {
             }).toList(),
             hint: Text("Pilih Sub Kategori"),
             value: _subKategoriValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _subKategoriValue = value;
               });
@@ -83,7 +83,7 @@ class _EditProdukScreenState extends State<EditProdukScreen> {
             }).toList(),
             hint: Text("Pilih Produksi"),
             value: _produksiValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _produksiValue = value;
               });
@@ -103,7 +103,7 @@ class _EditProdukScreenState extends State<EditProdukScreen> {
             }).toList(),
             hint: Text("Pilih Merk"),
             value: _merkValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _merkValue = value;
               });
@@ -143,7 +143,7 @@ class _EditProdukScreenState extends State<EditProdukScreen> {
             }).toList(),
             hint: Text("Pilih Status"),
             value: _statusValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _statusValue = value;
               });

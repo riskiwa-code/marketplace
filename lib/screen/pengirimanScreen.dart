@@ -10,16 +10,16 @@ class pengirimanScreen extends StatefulWidget {
 }
 
 class _pengirimanScreenState extends State<pengirimanScreen> {
-  String _kotaValue;
+  String? _kotaValue;
   List<String> _kotaList = ['Aceh', 'DKI Jakarta', 'JogjaKarta', 'Bali'];
 
-  String _metodePembayaranValue;
+  String? _metodePembayaranValue;
   List<String> _metodePembayaranList = [
     'Debit Instant',
     'Kredit',
   ];
 
-  String _metodePengirimanValue;
+  String? _metodePengirimanValue;
   List<String> _metodePengirimanList = [
     'JNE',
     'SiCepat',
@@ -105,7 +105,7 @@ class _pengirimanScreenState extends State<pengirimanScreen> {
                       }).toList(),
                       hint: Text("Kota"),
                       value: _kotaValue,
-                      onChanged: (String value) {
+                      onChanged: (String? value) {
                         setState(() {
                           _kotaValue = value;
                         });
@@ -144,7 +144,7 @@ class _pengirimanScreenState extends State<pengirimanScreen> {
                       }).toList(),
                       hint: Text("Metode Pembayaran"),
                       value: _metodePembayaranValue,
-                      onChanged: (String value) {
+                      onChanged: (String? value) {
                         setState(() {
                           _metodePembayaranValue = value;
                         });
@@ -164,7 +164,7 @@ class _pengirimanScreenState extends State<pengirimanScreen> {
                       }).toList(),
                       hint: Text("Metode Pengiriman"),
                       value: _metodePengirimanValue,
-                      onChanged: (String value) {
+                      onChanged: (String? value) {
                         setState(() {
                           _metodePengirimanValue = value;
                         });
@@ -263,14 +263,14 @@ class _pengirimanScreenState extends State<pengirimanScreen> {
                                     required: true);
                                 return InkWell(
                                   onTap: () {
-                                    controller.toggle();
+                                    controller!.toggle();
                                   },
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Flexible(
                                         child: Icon(
-                                          controller.expanded
+                                          controller!.expanded
                                               ? Icons.expand_less_rounded
                                               : Icons.expand_more_rounded,
                                         ),

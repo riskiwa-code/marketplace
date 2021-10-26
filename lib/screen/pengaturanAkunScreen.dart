@@ -8,9 +8,9 @@ class PengaturanAkunScreen extends StatefulWidget {
 }
 
 class _PengaturanAkunScreenState extends State<PengaturanAkunScreen> {
-  String _kotaValue;
+  String? _kotaValue;
   List<String> _kotaList = ['Jakarta', 'Bandung'];
-  String _metodePembayaranValue;
+  String? _metodePembayaranValue;
   List<String> _metodePembayaranList = ['Debit', 'Kredit'];
   @override
   Widget build(BuildContext context) {
@@ -80,7 +80,7 @@ class _PengaturanAkunScreenState extends State<PengaturanAkunScreen> {
             }).toList(),
             hint: Text("Pilih Kota"),
             value: _kotaValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _kotaValue = value;
               });
@@ -115,7 +115,7 @@ class _PengaturanAkunScreenState extends State<PengaturanAkunScreen> {
             }).toList(),
             hint: Text("Pilih Metode Pembayaran"),
             value: _metodePembayaranValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _metodePembayaranValue = value;
               });

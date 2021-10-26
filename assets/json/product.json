@@ -1,10 +1,10 @@
 [
-    {"id": "1", "gambar": "bakmi-ayam.png", "namaToko" : "Toko Agus", "namaProduk" : "Bakmi Ayam", "rating" : "4", "harga":"20000", "kategori" : "Makanan"},
-    {"id": "2", "gambar": "kecap.jpg", "namaToko" : "Toko Danny", "namaProduk" : "Kecap Bango", "rating" : "5", "harga":"25000", "kategori" : "Makanan"},
-    {"id": "3", "gambar": "mi-sedaap.png", "namaToko" : "Toko Kevin", "namaProduk" : "Mie Sedaap", "rating" : "3", "harga":"10000", "kategori" : "Makanan"},
-    {"id": "4", "gambar": "saus-tomat.jpg", "namaToko" : "Toko Aldo", "namaProduk" : "Saus Tomat", "rating" : "5", "harga":"24000", "kategori" : "Makanan"},
-    {"id": "5", "gambar": "kopi.jpg", "namaToko" : "Toko Agus", "namaProduk" : "Kopi", "rating" : "3", "harga":"20000", "kategori" : "Minuman"},
-    {"id": "6", "gambar": "susu.jpg", "namaToko" : "Toko Danny", "namaProduk" : "Susu", "rating" : "5", "harga":"25000", "kategori" : "Minuman"},
-    {"id": "7", "gambar": "teh.png", "namaToko" : "Toko Kevin", "namaProduk" : "Teh", "rating" : "4", "harga":"10000", "kategori" : "Minuman"},
-    {"id": "8", "gambar": "minuman-jeruk.jpg", "namaToko" : "Toko Aldo", "namaProduk" : "Minuman Jeruk", "rating" : "5", "harga":"24000", "kategori" : "Minuman"}
+    {"id": 1, "gambar": "bakmi-ayam.png", "namaToko" : "Toko Agus", "namaProduk" : "Bakmi Ayam", "rating" :4, "harga":20000, "kategori" : "Makanan"},
+    {"id": 2, "gambar": "kecap.jpg", "namaToko" : "Toko Danny", "namaProduk" : "Kecap Bango", "rating" : 5, "harga":25000, "kategori" : "Makanan"},
+    {"id": 3, "gambar": "mi-sedaap.png", "namaToko" : "Toko Kevin", "namaProduk" : "Mie Sedaap", "rating" : 3, "harga":10000, "kategori" : "Makanan"},
+    {"id": 4, "gambar": "saus-tomat.jpg", "namaToko" : "Toko Aldo", "namaProduk" : "Saus Tomat", "rating" : 5, "harga":24000, "kategori" : "Makanan"},
+    {"id": 5, "gambar": "kopi.jpg", "namaToko" : "Toko Agus", "namaProduk" : "Kopi", "rating" : 3, "harga":20000, "kategori" : "Minuman"},
+    {"id": 6, "gambar": "susu.jpg", "namaToko" : "Toko Danny", "namaProduk" : "Susu", "rating" : 5, "harga":25000, "kategori" : "Minuman"},
+    {"id": 7, "gambar": "teh.png", "namaToko" : "Toko Kevin", "namaProduk" : "Teh", "rating" : 4, "harga":10000, "kategori" : "Minuman"},
+    {"id": 8, "gambar": "minuman-jeruk.jpg", "namaToko" : "Toko Aldo", "namaProduk" : "Minuman Jeruk", "rating" : 5, "harga":24000, "kategori" : "Minuman"}
 ]

@@ -9,7 +9,7 @@ class PesananVendorDetailScreen extends StatefulWidget {
 }
 
 class _PesananVendorDetailScreenState extends State<PesananVendorDetailScreen> {
-  String _statusValue;
+  String? _statusValue;
   List<String> _statusList = ['Dikirim', 'Diproses'];
   @override
   Widget build(BuildContext context) {
@@ -202,7 +202,7 @@ class _PesananVendorDetailScreenState extends State<PesananVendorDetailScreen> {
             }).toList(),
             hint: Text("Pilih Kategori"),
             value: _statusValue,
-            onChanged: (String value) {
+            onChanged: (String? value) {
               setState(() {
                 _statusValue = value;
               });

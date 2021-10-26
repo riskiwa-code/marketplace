@@ -138,14 +138,14 @@ class _KeranjangPageState extends State<KeranjangPage> {
                                     required: true);
                                 return InkWell(
                                   onTap: () {
-                                    controller.toggle();
+                                    controller!.toggle();
                                   },
                                   child: Row(
                                     mainAxisSize: MainAxisSize.min,
                                     children: [
                                       Flexible(
                                         child: Icon(
-                                          controller.expanded
+                                          controller!.expanded
                                               ? Icons.expand_less_rounded
                                               : Icons.expand_more_rounded,
                                         ),

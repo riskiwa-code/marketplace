@@ -10,7 +10,7 @@ class DaftarVendor3Screen extends StatefulWidget {
 }
 
 class _DaftarVendor3ScreenState extends State<DaftarVendor3Screen> {
-  String _kategoriValue;
+  String? _kategoriValue;
   List<String> _kategoriList = ['Makanan', 'Elektronik'];
 
   @override
@@ -68,7 +68,7 @@ class _DaftarVendor3ScreenState extends State<DaftarVendor3Screen> {
               }).toList(),
               hint: Text("Pilih Kategori"),
               value: _kategoriValue,
-              onChanged: (String value) {
+              onChanged: (String? value) {
                 setState(() {
                   _kategoriValue = value;
                 });

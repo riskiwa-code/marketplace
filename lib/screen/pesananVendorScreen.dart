@@ -8,9 +8,9 @@ class PesananVendorScreen extends StatefulWidget {
 }
 
 class _PesananVendorScreenState extends State<PesananVendorScreen> {
-  bool statusValue;
+  bool? statusValue;
   var _statusKategoriValue;
-  String _statusDdValue;
+  String? _statusDdValue;
   List<String> _statusDdList = ['Pengiriman', 'Masuk', 'Proses'];
   Widget RadioButtonStatus(int aValue, String aLabel) {
     return Row(
@@ -94,7 +94,7 @@ class _PesananVendorScreenState extends State<PesananVendorScreen> {
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey[400],
+                        color: (Colors.grey[400])!,
                         blurRadius: 5,
                         spreadRadius: 2.0,
                         offset: Offset(
@@ -121,7 +121,7 @@ class _PesananVendorScreenState extends State<PesananVendorScreen> {
                               }).toList(),
                               hint: Text("Pilih Status"),
                               value: _statusDdValue,
-                              onChanged: (String value) {
+                              onChanged: (String? value) {
                                 setState(() {
                                   _statusDdValue = value;
                                 });

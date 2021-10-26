@@ -17,12 +17,12 @@ class _KelolaProdukScreenState extends State<KelolaProdukScreen> {
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey[400],
-            blurRadius: 5, 
-            spreadRadius: 2.0, 
+            color: (Colors.grey[400])!,
+            blurRadius: 5,
+            spreadRadius: 2.0,
             offset: Offset(
-              0, 
-              0, 
+              0,
+              0,
             ),
           )
         ],

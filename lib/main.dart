@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:marketplace/screen/TestDB.dart';
 import 'package:marketplace/screen/akunScreen.dart';
 import 'package:marketplace/screen/editProdukScreen.dart';
 import 'package:marketplace/screen/homeScreen.dart';
@@ -17,6 +18,7 @@ import 'package:marketplace/screen/pesananVendorDetailScreen.dart';
 import 'package:marketplace/screen/pesananVendorScreen.dart';
 import 'package:marketplace/screen/testScreen.dart';
 import 'package:marketplace/screen/tokoScreen.dart';
+import 'package:marketplace/utils/user_preferences.dart';
 import 'screen/masukScreen.dart';
 import 'screen/daftarScreen.dart';
 import 'screen/daftarPribadi1Screen.dart';
@@ -28,7 +30,11 @@ import 'screen/daftarVendor3Screen.dart';
 import 'screen/kategoriListScreen.dart';
 import 'screen/kategoriScreen.dart';
 
-void main() {
+Future main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+
+  await UserPreferences.init();
+
   runApp(MyApp());
 }
 
@@ -43,7 +49,17 @@ class _MyAppState extends State<MyApp> {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      theme: ThemeData(primaryColor: Colors.white),
+      theme: ThemeData(
+        appBarTheme: AppBarTheme(
+          backgroundColor: Colors.white,
+          iconTheme: IconThemeData(color: Colors.black),
+          actionsIconTheme: IconThemeData(
+            color: Colors.black,
+          ),
+          titleTextStyle: TextStyle(color: Colors.black),
+          centerTitle: true,
+        ),
+      ),
       home: MainScreen(),
     );
   }

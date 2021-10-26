@@ -8,7 +8,7 @@ class PesananScreen extends StatefulWidget {
 }
 
 class _PesananScreenState extends State<PesananScreen> {
-  bool statusValue;
+  bool? statusValue;
   var _statusKategoriValue;
   Widget RadioButtonStatus(int aValue, String aLabel) {
     return Row(
@@ -89,7 +89,7 @@ class _PesananScreenState extends State<PesananScreen> {
                     borderRadius: BorderRadius.circular(10),
                     boxShadow: [
                       BoxShadow(
-                        color: Colors.grey[400],
+                        color: (Colors.grey[400])!,
                         blurRadius: 5,
                         spreadRadius: 2.0,
                         offset: Offset(

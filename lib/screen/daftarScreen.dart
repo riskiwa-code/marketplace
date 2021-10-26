@@ -11,7 +11,7 @@ class daftarScreen extends StatefulWidget {
 }
 
 class _daftarScreenState extends State<daftarScreen> {
-  String _sebagaiValue;
+  String? _sebagaiValue;
   List<String> _sebagaiList = ['Pribadi', 'Vendor'];
   @override
   Widget build(BuildContext context) {
@@ -34,7 +34,7 @@ class _daftarScreenState extends State<daftarScreen> {
               }).toList(),
               hint: Text("Pilih.."),
               value: _sebagaiValue,
-              onChanged: (String value) {
+              onChanged: (String? value) {
                 setState(() {
                   _sebagaiValue = value;
                 });

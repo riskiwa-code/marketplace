@@ -8,7 +8,7 @@ class KategoriScreen extends StatefulWidget {
 }
 
 class _KategoriScreenState extends State<KategoriScreen> {
-  bool kategoriValue;
+  bool? kategoriValue;
   var _groupKategoriValue;
   var _groupMerkValue;
   var _groupTokoValue;

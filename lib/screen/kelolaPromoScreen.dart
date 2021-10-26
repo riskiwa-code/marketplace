@@ -18,7 +18,7 @@ class _KelolaPromoScreenState extends State<KelolaPromoScreen> {
         borderRadius: BorderRadius.circular(10),
         boxShadow: [
           BoxShadow(
-            color: Colors.grey[400],
+            color: (Colors.grey[400])!,
             blurRadius: 5,
             spreadRadius: 2.0,
             offset: Offset(
